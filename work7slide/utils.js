@@ -59,12 +59,12 @@ function insertSort(str) {let arr = str.split(',')
 let wdLog= []
 for (let i = 1;i < arr.length; i++){
     for (let j = i;j > 0; j--){
-        wdLog.push([arr.concat(), [j,j + 1]])
-        wdLog.push([arr.concat(), [j,j + 1]])
-        wdLog.push([arr.concat(), [j,j + 1]])
+        wdLog.push([arr.concat(), [j,j - 1]])
+        wdLog.push([arr.concat(), [j,j - 1]])
+        wdLog.push([arr.concat(), [j,j - 1]])
         if (arr[j - 1] > arr[j]) {
             [arr[j - 1],arr[j]] = [arr[j], arr[j - 1]]
-         wdLog.push([arr.concat(), [j,j + 1]])
+         wdLog.push([arr.concat(), [j,j - 1 ]])
         }
     }
 }
